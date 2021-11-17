@@ -190,8 +190,8 @@ class ShowNamedMenu(ShowMenu):
             # If nodes returned, then cut levels and apply modifiers
             if nodes:
                 # Post-Cut ... apply cut levels and menu modifiers
-                nodes = flatten(nodes)
-                children = cut_levels(nodes, from_level, to_level, extra_inactive, extra_active)
+                children = flatten(nodes)
+                #children = cut_levels(nodes, from_level, to_level, extra_inactive, extra_active)
                 children = menu_renderer.apply_modifiers(children, namespace, root_id, post_cut=True)
             else:
                 children = []
