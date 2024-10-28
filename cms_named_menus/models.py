@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.contrib.sites.models import Site
 from autoslug.fields import AutoSlugField
 from jsonfield import JSONField
@@ -29,7 +29,7 @@ class CMSNamedMenu(models.Model):
                           'object_hook': collections.OrderedDict
                       },
                       default=[])
-    
+
     site = models.ForeignKey(Site,
                              on_delete=models.CASCADE,
                              help_text=_('The site the menu is accessible at.'),
